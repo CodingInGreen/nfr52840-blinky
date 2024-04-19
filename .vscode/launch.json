@@ -5,12 +5,11 @@
             "type": "probe-rs-debug",
             "request": "launch",
             "name": "Debug nRF52840 with probe-rs",
-            "cwd": "${workspaceFolder}",
-            "probe": "4617:18515:dc61cd078f743b33ef4014",
+            "probe": "1209:4853:dc61cd078f743b33ef4014",
             "chip": "nRF52840_xxAA",
             "flashingConfig": {
                 "flashingEnabled": true,
-                "haltAfterReset": true,
+                "haltAfterReset": false,
             },
             "coreConfigs": [
                 {
