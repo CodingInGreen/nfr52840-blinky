@@ -2,18 +2,27 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Debug Microcontroller",
-            "type": "cortex-debug",
+            "type": "probe-rs-debug",
             "request": "launch",
-            "servertype": "openocd",
-            "executable": "./target/thumbv7em-none-eabihf/debug/blinky",
-            "configFiles": [
-                "interface/jlink.cfg",
-                "target/nrf52.cfg"
+            "name": "Debug nRF52840 with probe-rs",
+            "cwd": "${workspaceFolder}",
+            "probe": "4617:18515:dc61cd078f743b33ef4014",
+            "chip": "nRF52840_xxAA",
+            "flashingConfig": {
+                "flashingEnabled": true,
+                "haltAfterReset": true,
+            },
+            "coreConfigs": [
+                {
+                    "coreIndex": 0,
+                    "programBinary": "${workspaceFolder}/target/thumbv7em-none-eabihf/debug/blinky",
+                    "svdFile": "${workspaceFolder}/nRF52840.svd"
+                }
             ],
-            "svdFile": "../nRF52840.svd",
-            "showDevDebugOutput": "raw",
-            "cwd": "${workspaceFolder}"
+            "consoleLogLevel": "Debug",
+            "env": {
+                "RUST_LOG": "info"
+            }
         }
     ]
 }
