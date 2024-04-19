@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug Microcontroller",
+            "type": "cortex-debug",
+            "request": "launch",
+            "servertype": "openocd",
+            "executable": "./target/thumbv7em-none-eabihf/debug/blinky",
+            "configFiles": [
+                "interface/jlink.cfg",
+                "target/nrf52.cfg"
+            ],
+            "svdFile": "../nRF52840.svd",
+            "showDevDebugOutput": "raw",
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
