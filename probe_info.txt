@@ -1,0 +1,28 @@
+system_profiler SPUSBDataType
+
+USB:
+
+    USB 3.1 Bus:
+
+      Host Controller Driver: AppleT6000USBXHCI
+
+    USB 3.1 Bus:
+
+      Host Controller Driver: AppleT6000USBXHCI
+
+        Rusty Probe with CMSIS-DAP v1/v2 Support:
+
+          Product ID: 0x4853
+          Vendor ID: 0x1209
+          Version: 0.10
+          Serial Number: dc61cd078f743b33ef4014
+          Speed: Up to 12 Mb/s
+          Manufacturer: Probe-rs development team
+          Location ID: 0x00100000 / 1
+          Current Available (mA): 500
+          Current Required (mA): 500
+          Extra Operating Current (mA): 0
+
+    USB 3.1 Bus:
+
+      Host Controller Driver: AppleT6000USBXHCI
